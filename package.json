@@ -1,0 +1,33 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "this is a demo for react+typescript+webpack",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kongmengfei/demo1.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "typescript"
+  ],
+  "author": "BakerCN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kongmengfei/demo1/issues"
+  },
+  "homepage": "https://github.com/kongmengfei/demo1#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
