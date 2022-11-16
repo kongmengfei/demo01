@@ -18,6 +18,17 @@ module.exports = {
                 ],
             },
             {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ]
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
@@ -34,10 +45,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
+        assetModuleFilename: 'images/[name]-[hash][ext][query]',
+        hashDigestLength: 5,
+        clean: true // Clean the output directory before emit.
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '..', './src/index.html'),
+            template: path.resolve(__dirname, '..', './public/index.html'),
         })
     ],
     stats: 'errors-only'
