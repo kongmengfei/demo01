@@ -1,0 +1,10 @@
+.hh2 {
+    color: brown;
+    line-clamp: 2;
+}
+
+::placeholder {
+
+    color: gray;
+
+}
