@@ -1,5 +1,5 @@
 import logo from '../public/logo512.png';
-import styles from './styles/App.scss';
+import styles from './styles/App.module.scss';
 
 interface IAppProp {
     name: string;
