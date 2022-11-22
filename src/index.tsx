@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from "./component/App";
+import App, { Apploader } from "./component/App";
 import ErrorPage from './component/ErrorPage';
 const container = document.getElementById('root')!;
 let router = createBrowserRouter([
@@ -9,7 +9,7 @@ let router = createBrowserRouter([
         path: "/",
         errorElement: <ErrorPage />,
         element: <App name='demo01' />,
-        //loader: rootLoader,
+        loader: Apploader,
         children: [
             {
                 path: "new",
@@ -23,7 +23,7 @@ let router = createBrowserRouter([
                 action: noteAction,
                 errorElement: <h2>Note not found</h2>,
             },
-        ],
+        ]
     }
 ]);
 // Create a root.

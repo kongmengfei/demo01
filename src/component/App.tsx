@@ -1,11 +1,14 @@
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
+import { getNotes } from '../service/note';
 
 import styles from '../styles/App.module.scss';
 
 interface IAppProp {
     name: string;
 }
-
+export async function Apploader() {
+    return getNotes();
+  }
 export default function App(props: IAppProp) {
     const notes = useLoaderData();
 

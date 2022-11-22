@@ -1,12 +1,15 @@
 import { useLoaderData, Form, redirect } from "react-router-dom";
-
+import styles from '../styles/Note.module.scss';
+export function NoteList() {
+    return <div>Notes</div>;
+}
 export default function Note() {
-    const note = useLoaderData();
+    const note = useLoaderData() as any;
     return (
         <div>
             <h2>{note.title}</h2>
             <div>{note.content}</div>
-            <Form method="post" style={{ marginTop: "2rem" }}>
+            <Form method="post" className={styles.noteform}>
                 <button type="submit">Delete</button>
             </Form>
         </div>
