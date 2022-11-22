@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+
+    .content {
+        padding: "0 2rem";
+        border-right: "solid 1px #ccc";
+    }
+
+    .out{
+        flex: 1;
+         padding: "0 2rem";
+    }
+}

@@ -3,8 +3,16 @@
     line-clamp: 2;
 }
 
+::-moz-placeholder {
+
+    color: gray;
+
+}
+
 ::placeholder {
 
     color: gray;
 
 }
+
+/*# sourceMappingURL=main.css.map*/
