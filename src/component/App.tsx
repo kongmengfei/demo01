@@ -8,14 +8,15 @@ interface IAppProp {
 }
 export async function Apploader() {
     return getNotes();
-  }
+}
+
 export default function App(props: IAppProp) {
-    const notes = useLoaderData();
+    const notes = useLoaderData() as any;
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <h1>Notes!</h1>
+                <h1>{props.name} Notes!</h1>
                 <p>
                     <Link to="new">Create Note</Link>
                 </p>

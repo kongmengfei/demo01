@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
+    target: ['browserslist'],
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
@@ -17,8 +18,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', './public/index.html'),
-        }),        
+        }),
         new ESLintPlugin({ extensions: ['.js', '.ts'] })
-    ],
-    stats: 'errors-only'
+    ]
 }

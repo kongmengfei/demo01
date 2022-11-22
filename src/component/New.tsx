@@ -23,7 +23,10 @@ export default function NewNote() {
     );
 }
 
-export async function Newaction({ request ) {
+export async function Newaction(p: any) {
+    console.log('Newaction', p);
+
+    const { request } = p;
     const formData = await request.formData();
     const note = await createNote({
         title: formData.get("title"),

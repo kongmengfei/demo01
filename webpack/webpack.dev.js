@@ -1,4 +1,4 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -68,7 +68,7 @@ module.exports = {
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset/resource'                
+                type: 'asset/resource'
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
@@ -80,5 +80,6 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.name': JSON.stringify('Vishwas'),
         })
-    ]
+    ],
+    stats: "detailed"
 }

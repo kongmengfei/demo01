@@ -99,4 +99,5 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin()
     ],
+    stats:'errors-warnings'
 }

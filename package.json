@@ -9,6 +9,17 @@
     "build": "webpack --config webpack/webpack.config.js --env env=dev --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "browserslist": {
+    "production": [
+      "> 2%",
+      "ie >= 10"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:kongmengfei/demo01.git"
