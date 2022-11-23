@@ -5,5 +5,15 @@
     ],
     "extends": [
         "plugin:@typescript-eslint/recommended"
-    ]
+    ],
+    "rules": {
+        "prefer-const": [
+            "warn",
+            {
+                "destructuring": "any",
+                "ignoreReadBeforeAssign": false
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "off"
+    }
 }
