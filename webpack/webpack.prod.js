@@ -18,8 +18,8 @@ module.exports = {
     devtool: 'source-map',
     output: {
         path: paths.distRoot,
-        filename: 'static/js/[name].[contenthash:5].js',
-        chunkFilename: 'static/js/[name].[contenthash:5].chunk.js',
+        filename: 'static/js/[name].[hash:5].js',
+        chunkFilename: 'static/js/[name].[hash:5].chunk.js',
         assetModuleFilename: 'static/media/[name].[hash][ext]',
         publicPath: '/',
         clean: true, // Clean the output directory before emit.
@@ -55,7 +55,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                plugins: [require("autoprefixer")]
+                                plugins: ["postcss-preset-env"]
                             }
                         }
                     }
@@ -78,7 +78,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                plugins: [require("autoprefixer")]
+                                plugins: ["postcss-preset-env"]
                             }
                         }
                     }
@@ -101,9 +101,8 @@ module.exports = {
                     {
                         loader: "postcss-loader",
                         options: {
-                            postcssOptions: {
-                                // 添加 autoprefixer 插件
-                                plugins: [require("autoprefixer")],
+                            postcssOptions: {                                
+                                plugins: ["postcss-preset-env"]
                             },
                         },
                     },
@@ -127,7 +126,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                plugins: [require("autoprefixer")]
+                                plugins: ["postcss-preset-env"]
                             },
                         },
                     },
@@ -210,7 +209,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', './public/index.html'),
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'static/css/[name]-[hash:5].css'
+        }),
         new BundleAnalyzerPlugin(),
         new ESLintPlugin({ extensions: ['.js', '.ts', '.tsx', '.jsx'] })
     ],

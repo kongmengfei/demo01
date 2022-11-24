@@ -8,12 +8,13 @@
     ],
     "rules": {
         "prefer-const": [
-            "warn",
+            "off",
             {
                 "destructuring": "any",
                 "ignoreReadBeforeAssign": false
             }
         ],
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion":0
     }
 }

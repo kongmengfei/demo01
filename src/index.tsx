@@ -7,7 +7,7 @@ import NewNote, { Newaction } from './component/New';
 import Note, { Noteaction, Noteloader } from './component/Note';
 
 const container = document.getElementById('root')!;
-let router = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
         errorElement: <ErrorPage />,
