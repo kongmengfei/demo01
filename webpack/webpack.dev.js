@@ -50,6 +50,7 @@ module.exports = {
             {
                 test: /\.(ts|js)x?$/,
                 include: paths.srcRoot,
+                exclude: /node_modules/,
                 loader: 'babel-loader'
             },
             {
@@ -70,8 +71,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                // 添加 autoprefixer 插件
-                                plugins: [require("autoprefixer")],
+                                plugins: ["postcss-preset-env"]
                             }
                         }
                     }
@@ -94,8 +94,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                // 添加 autoprefixer 插件
-                                plugins: [require("autoprefixer")],
+                                plugins: ["postcss-preset-env"]
                             }
                         }
                     }
@@ -119,8 +118,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                // 添加 autoprefixer 插件
-                                plugins: [require("autoprefixer")],
+                                plugins: ["postcss-preset-env"]
                             },
                         },
                     },
@@ -144,7 +142,7 @@ module.exports = {
                         loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                plugins: [require("autoprefixer")]
+                                plugins: ["postcss-preset-env"]
                             },
                         },
                     },
