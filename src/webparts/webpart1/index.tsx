@@ -1,8 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from '../../Common/component/ErrorPage';
 import App, { Apploader } from "./component/App";
-import ErrorPage from './component/ErrorPage';
+
 import NewNote, { Newaction } from './component/New';
 import Note, { Noteaction, Noteloader } from './component/Note';
 

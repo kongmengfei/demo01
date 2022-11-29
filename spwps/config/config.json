@@ -9,10 +9,28 @@
           "manifest": "./src/webparts/targetwp/TargetwpWebPart.manifest.json"
         }
       ]
+    },
+    "targetwp-01-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/targetwp01/Targetwp01WebPart.js",
+          "manifest": "./src/webparts/targetwp01/Targetwp01WebPart.manifest.json"
+        }
+      ]
+    },
+    "targetwpnf-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/targetwpnf/TargetwpnfWebPart.js",
+          "manifest": "./src/webparts/targetwpnf/TargetwpnfWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "TargetwpWebPartStrings": "lib/webparts/targetwp/loc/{locale}.js"
+    "TargetwpWebPartStrings": "lib/webparts/targetwp/loc/{locale}.js",
+    "Targetwp01WebPartStrings": "lib/webparts/targetwp01/loc/{locale}.js",
+    "TargetwpnfWebPartStrings": "lib/webparts/targetwpnf/loc/{locale}.js"
   }
 }
