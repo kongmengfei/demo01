@@ -1,4 +1,4 @@
-|-- C:\software\demo1
+|-- C:\software\demo1            /* 根目录 */
     |-- .babelrc.json
     |-- .eslintrc
     |-- .gitignore
